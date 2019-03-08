@@ -9,15 +9,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 require("rxjs/add/operator/map");
 var app_api_1 = require("../app.api");
-var app_error_handler_1 = require("../app.error-handler");
 var CoacheesService = /** @class */ (function () {
     function CoacheesService(http) {
         this.http = http;
     }
     CoacheesService.prototype.coachees = function () {
-        return this.http.get(app_api_1.COACH_API + "/coachees1")
-            .map(function (response) { return response.json(); })
-            .catch(app_error_handler_1.ErrorHandler.handlerError);
+        return this.http.get(app_api_1.COACH_API + "/coachees")
+            .map(function (response) { return response.json(); });
     };
     CoacheesService = __decorate([
         core_1.Injectable()

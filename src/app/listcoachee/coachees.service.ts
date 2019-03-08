@@ -18,8 +18,7 @@ export class CoacheesService {
   constructor(private http: Http){ }
 
     coachees(): Observable<Coachee[]> {
-      return this.http.get(`${COACH_API}/coachees1`)
+      return this.http.get(`${COACH_API}/coachees`)
         .map(response => response.json())
-        .catch(ErrorHandler.handlerError)
     }
 }
