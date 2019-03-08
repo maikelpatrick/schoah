@@ -1,31 +1,25 @@
+import {Injectable} from '@angular/core'
+
+import {Http} from '@angular/http'
+
 import {Coachee} from "./coachee/coachee.model"
 
+import {Observable} from "rxjs/Observable"
+
+import 'rxjs/add/operator/map'
+
+import {COACH_API} from '../app.api'
+import {ErrorHandler} from '../app.error-handler'
+
+@Injectable()
 export class CoacheesService {
 
-    rests: Coachee[] = [
-        {
-          id: "bread-bakery",
-          name: "Bread & Bakery",
-          category: "Bakery",
-          sessoes: "2",
-          rating: 4.9,
-          imagePath: "assets/img/restaurants/breadbakery.png"
-        },
-        {
-          id: "burger-house",
-          name: "Burger House",
-          category: "Hamburgers",
-          sessoes: "10",
-          rating: 3.5,
-          imagePath: "assets/img/restaurants/burgerhouse.png"
-        }]
 
-  constructor(){ }
+  constructor(private http: Http){ }
 
-  ngOnInit(){
-  }
-
-  coachees(): Coachee[]{
-    return this.rests;
-  }
+    coachees(): Observable<Coachee[]> {
+      return this.http.get(`${COACH_API}/coachees1`)
+        .map(response => response.json())
+        .catch(ErrorHandler.handlerError)
+    }
 }
