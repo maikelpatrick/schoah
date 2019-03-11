@@ -13,6 +13,8 @@ import { ListcoacheeComponent } from './listcoachee/listcoachee.component';
 import { CoacheeComponent } from './listcoachee/coachee/coachee.component';
 import { CoacheesService } from './listcoachee/coachees.service';
 import { CoacheeDetalheComponent } from './coachee-detalhe/coachee-detalhe.component';
+import { CoacheeMenuComponent } from './coachee-detalhe/coachee-menu/coachee-menu.component';
+import { MenuItemComponent } from './coachee-detalhe/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CoacheeDetalheComponent } from './coachee-detalhe/coachee-detalhe.compo
     AboutComponent,
     ListcoacheeComponent,
     CoacheeComponent,
-    CoacheeDetalheComponent
+    CoacheeDetalheComponent,
+    CoacheeMenuComponent,
+    MenuItemComponent
   ],
   imports: [
     BrowserModule,

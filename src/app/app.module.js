@@ -19,6 +19,8 @@ var listcoachee_component_1 = require("./listcoachee/listcoachee.component");
 var coachee_component_1 = require("./listcoachee/coachee/coachee.component");
 var coachees_service_1 = require("./listcoachee/coachees.service");
 var coachee_detalhe_component_1 = require("./coachee-detalhe/coachee-detalhe.component");
+var coachee_menu_component_1 = require("./coachee-detalhe/coachee-menu/coachee-menu.component");
+var menu_item_component_1 = require("./coachee-detalhe/menu-item/menu-item.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -31,7 +33,9 @@ var AppModule = /** @class */ (function () {
                 about_component_1.AboutComponent,
                 listcoachee_component_1.ListcoacheeComponent,
                 coachee_component_1.CoacheeComponent,
-                coachee_detalhe_component_1.CoacheeDetalheComponent
+                coachee_detalhe_component_1.CoacheeDetalheComponent,
+                coachee_menu_component_1.CoacheeMenuComponent,
+                menu_item_component_1.MenuItemComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
