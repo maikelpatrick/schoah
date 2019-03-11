@@ -12,9 +12,7 @@ var ListcoacheeComponent = /** @class */ (function () {
         this.coacheesService = coacheesService;
     }
     ListcoacheeComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.coacheesService.coachees()
-            .subscribe(function (coachees) { return _this.coachees = coachees; });
+        this.coachees = this.coacheesService.coachees();
     };
     ListcoacheeComponent = __decorate([
         core_1.Component({

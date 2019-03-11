@@ -14,8 +14,7 @@ export class ListcoacheeComponent implements OnInit {
   constructor(private coacheesService: CoacheesService) { }
 
   ngOnInit() {
-    this.coacheesService.coachees()
-      .subscribe(coachees => this.coachees = coachees)
+    this.coachees = this.coacheesService.coachees()
   }
 
 }
